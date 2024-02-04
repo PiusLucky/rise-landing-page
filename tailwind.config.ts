@@ -17,7 +17,17 @@ const config = {
         "2xl": "1400px",
       },
     },
+
     extend: {
+      colors: {
+          primary: "#7161EC",
+          customDark: "#0D0D0D",
+          customGray: "#B2B1B8"
+      },
+      backgroundImage:{
+        'hero-gradient': 'url(/images/hero_gradient.png)',
+        'radial': 'url(/images/ecclipse_radial.png)'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

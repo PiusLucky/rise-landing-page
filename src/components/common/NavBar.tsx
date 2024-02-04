@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import Link from "next/link";
+import MainButton from "./MainButton";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
@@ -16,23 +17,38 @@ function NavBar() {
       <div className=" hidden lg:block animate-in fade-in zoom-in bg-white p-4">
         <div className="flex justify-between mx-[41px] items-center">
           <div>
-            <img src="/svgs/sf_logo.svg" alt="logo" />
-          </div>
-          <div className="flex gap-[20px] xl:gap-[50px] text-[16px] items-center select-none">
-            <p
-              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
-            >
-              Link1
-            </p>
-            {/* Add more links here */}
+            <img src="/images/rise_logo.png" alt="logo" />
           </div>
           <div className="flex items-center gap-[40px] select-none">
-            <Link
-              href="/auth/login"
-              className="hover:text-primary cursor-pointer flex items-center gap-2 "
+            <p
+              className={`hover:bg-[#0005370d] hover:px-4 hover:py-2 hover:rounded-[10px] cursor-pointer flex items-center gap-2  font-[500] text-gray`}
             >
-              Sign in
-            </Link>
+              Features
+            </p>
+
+            <p
+              className={`hover:bg-[#0005370d] hover:px-4 hover:py-2 hover:rounded-[10px] cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Pricing
+            </p>
+
+            <p
+              className={`hover:bg-[#0005370d] hover:px-4 hover:py-2 hover:rounded-[10px] cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Manifest
+            </p>
+
+            <p
+              className={`hover:bg-[#0005370d] hover:px-4 hover:py-2 hover:rounded-[10px] cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Changelog
+            </p>
+
+            <MainButton
+              text="Sign in"
+              classes="bg-white text-black border-[2px] border-gray-300 shadow-lg hover:bg-white"
+            />
+            <MainButton text="Get Started" />
           </div>
         </div>
       </div>
@@ -44,7 +60,7 @@ function NavBar() {
       >
         <div className="flex justify-between mx-[10px]">
           <div className="flex gap-[50px] text-[16px] items-center select-none">
-            <img src="/svgs/sf_logo.svg" alt="logo" className="w-[7rem]" />
+            <img src="/images/rise_logo.png" alt="logo" className="w-[5rem]" />
           </div>
           <div className="flex items-center gap-[40px]">
             {menu ? (
@@ -54,7 +70,7 @@ function NavBar() {
               />
             ) : (
               <img
-                src="/svgs/hamburger.svg"
+                src="/images/hamburger.svg"
                 alt="logo"
                 className="cursor-pointer animate-in fade-in zoom-in"
                 onClick={toggleMenu}
@@ -65,16 +81,35 @@ function NavBar() {
         {menu ? (
           <div className="my-8 select-none animate-in slide-in-from-right">
             <div className="flex flex-col gap-8 mt-8 mx-4">
-              <p className="text-black cursor-pointer">
-                <span>How it works</span>
+              <p
+                className={`cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Features
               </p>
-              {/* Add more links here */}
 
-              <div className="flex flex-col gap-[40px] select-none">
-                <Link href="/auth/login" className="text-black cursor-pointer">
-                  Signin
-                </Link>
-              </div>
+              <p
+                className={`cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Pricing
+              </p>
+
+              <p
+                className={`cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Manifest
+              </p>
+
+              <p
+                className={`cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Changelog
+              </p>
+
+              <MainButton
+                text="Sign in"
+                classes="bg-white text-black border-[2px] border-gray-300 shadow-lg hover:bg-white"
+              />
+              <MainButton text="Get Started" />
             </div>
           </div>
         ) : (
