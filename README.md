@@ -5,7 +5,7 @@ An alternate rise landing page built with Next14, Shadcn, and Tailwind. Smooth s
 https://rise-landing-page.vercel.app/
 
 
-Youtube:  
+Youtube:  https://youtu.be/iEHbbCprtrw
 
 
 Figma:  https://www.figma.com/file/rN2oZL4j6bZLe7uYbocDG6/Landing-page-UI-%E2%80%94-Rise-Calendar-%E2%80%94-Web-to-Figma-(Community)?node-id=3401%3A7681&mode=dev
